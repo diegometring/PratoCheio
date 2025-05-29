@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Feijoada Completa",
+    "image": "https://via.placeholder.com/150/FF6347/FFFFFF?Text=Feijoada",
+    "description": "Tradicional feijoada brasileira com todas as carnes, acompanhada de arroz, couve, farofa e laranja.",
+    "price": 35.90,
+    "category": "PRATOS PRINCIPAIS",
+    "available": true
+  },
+  {
+    "id": 2,
+    "name": "Moqueca de Peixe",
+    "image": "https://via.placeholder.com/150/4682B4/FFFFFF?Text=Moqueca",
+    "description": "Deliciosa moqueca de peixe com azeite de dendê, leite de coco, pimentões e coentro. Acompanha arroz e pirão.",
+    "price": 42.50,
+    "category": "PRATOS PRINCIPAIS",
+    "available": true
+  },
+  {
+    "id": 3,
+    "name": "Suco de Laranja Natural",
+    "image": "https://via.placeholder.com/150/FFA500/FFFFFF?Text=Suco",
+    "description": "Suco de laranja feito na hora, 100% natural.",
+    "price": 8.00,
+    "category": "BEBIDAS",
+    "available": true
+  },
+  {
+    "id": 4,
+    "name": "Pudim de Leite",
+    "image": "https://via.placeholder.com/150/D2691E/FFFFFF?Text=Pudim",
+    "description": "Clássico pudim de leite condensado com calda de caramelo.",
+    "price": 12.00,
+    "category": "SOBREMESAS",
+    "available": false
+  }
+]
