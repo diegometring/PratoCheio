@@ -4,12 +4,10 @@ import { styles } from './styles';
 import api from '../../../api';
 import { AxiosError } from 'axios';
 
-// Interfaces para os tipos de dados esperados da API
 interface Recipe {
   id: string;
   name: string;
   description: string;
-  // Adicione outros campos da receita aqui
 }
 
 interface InventoryItem {
@@ -17,7 +15,6 @@ interface InventoryItem {
   name: string;
   quantity: number;
   unit: string;
-  // Adicione outros campos do estoque aqui
 }
 
 export default function HomeScreen() {

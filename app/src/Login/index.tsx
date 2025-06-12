@@ -22,7 +22,7 @@ interface LoginData {
 }
 
 export default function LoginScreen() {
-  const router = useRouter(); // Descomente se estiver usando expo-router
+  const router = useRouter();
   const [loginData, setLoginData] = useState<LoginData>({
     email: '',
     password: ''
@@ -50,11 +50,8 @@ export default function LoginScreen() {
         password: loginData.password
       });
 
-      // Aqui você pode armazenar o token ou dados do usuário da 'response.data' se o backend retornar
-      // console.log('Login bem-sucedido:', response.data);
-
       Alert.alert('Sucesso', 'Login realizado com sucesso!');
-      //router.push('/telaInicial');
+      router.push('/src/telaInicial');
       
     } catch (error) {
       const axiosError = error as AxiosError<{ message?: string }>;
@@ -80,8 +77,7 @@ export default function LoginScreen() {
 
   const navigateToRegister = () => {
     router.push("/src/createUser");
-    // Se estiver usando React Navigation: navigation.navigate('createuser');
-    Alert.alert('Navegação', 'Navegar para a tela de registro (ajuste a navegação conforme seu setup)');
+    Alert.alert('Navegação', 'Navegando para tela de Cadastro');
   };
 
   return (

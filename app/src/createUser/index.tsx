@@ -12,7 +12,6 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import axios, { AxiosError } from 'axios';
 import api from '../../../api';
 
-// Definições de navegação (ajuste conforme a sua configuração de rotas)
 type RootStackParamList = {
   login: undefined;
   createuser: undefined;
@@ -62,7 +61,6 @@ export default function CreateUser({ navigation }: CreateUserProps) {
         name: formData.name,
         email: formData.email,
         password: formData.password,
-        // Envia phoneNumber apenas se tiver um valor, caso contrário é undefined
         phoneNumber: formData.phoneNumber || undefined
       });
 
@@ -77,7 +75,6 @@ export default function CreateUser({ navigation }: CreateUserProps) {
       let errorMessage = 'Erro ao realizar cadastro';
 
       if (axiosError.response) {
-        // O NestJS lança ConflictException (código 409) para e-mail já cadastrado
         if (axiosError.response.status === 409) {
           errorMessage = axiosError.response.data?.message || 'Email já está em uso';
         } else if (axiosError.response.status === 401) {
@@ -87,10 +84,8 @@ export default function CreateUser({ navigation }: CreateUserProps) {
           errorMessage = `Erro do servidor: ${axiosError.response.status} - ${axiosError.response.data?.message || axiosError.message}`;
         }
       } else if (axiosError.request) {
-        // A requisição foi feita, mas nenhuma resposta foi recebida (ex: servidor offline)
         errorMessage = 'Não foi possível conectar ao servidor. Verifique sua conexão e o endereço da API.';
       } else {
-        // Algo aconteceu na configuração da requisição que acionou um erro
         errorMessage = `Erro na requisição: ${axiosError.message}`;
       }
 
